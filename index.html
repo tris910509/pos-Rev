@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Kasir</h1>
+
+        <!-- Kategori -->
+        <section id="categorySection">
+            <h2>Kategori</h2>
+            <form id="categoryForm">
+                <input type="text" id="categoryName" placeholder="Nama Kategori">
+                <button type="button" onclick="addCategory()">Tambah Kategori</button>
+            </form>
+            <div id="categoryList"></div>
+        </section>
+
+        <!-- Produk -->
+        <section id="productSection">
+            <h2>Produk</h2>
+            <form id="productForm">
+                <input type="text" id="productName" placeholder="Nama Produk">
+                <input type="number" id="productPrice" placeholder="Harga">
+                <input type="number" id="productStock" placeholder="Stok">
+                <select id="productCategory"></select>
+                <button type="button" onclick="addProduct()">Tambah Produk</button>
+            </form>
+            <div id="productList"></div>
+        </section>
+
+        <!-- Supplier -->
+        <section id="supplierSection">
+            <h2>Supplier</h2>
+            <form id="supplierForm">
+                <input type="text" id="supplierName" placeholder="Nama Supplier">
+                <input type="text" id="supplierCompany" placeholder="Nama Perusahaan">
+                <input type="text" id="supplierPhone" placeholder="No Handphone">
+                <input type="text" id="supplierAddress" placeholder="Alamat">
+                <button type="button" onclick="addSupplier()">Tambah Supplier</button>
+            </form>
+            <div id="supplierList"></div>
+        </section>
+
+        <!-- Transaksi -->
+        <section id="transactionSection">
+            <h2>Transaksi</h2>
+            <form id="transactionForm">
+                <select id="transactionProduct"></select>
+                <input type="number" id="transactionQuantity" placeholder="Jumlah">
+                <input type="number" id="transactionPayment" placeholder="Pembayaran">
+                <select id="paymentMethod">
+                    <option value="cash">Cash</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="qr">QR</option>
+                </select>
+                <button type="button" onclick="addTransaction()">Tambah Transaksi</button>
+            </form>
+            <div id="transactionList"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
